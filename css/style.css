@@ -1,1 +1,111 @@
+/* Reset básico */
+body,
+h1,
+h2,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
 
+body {
+    overflow: hidden;
+    background-color: #000;
+    /* Fundo preto para todo o site */
+    color: #fff;
+}
+
+/* Tela de Loading */
+#loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    /* Fundo preto */
+    color: #fff;
+    text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid #00ff00;
+    /* Destaque com cor verde */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Introdução */
+#intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+}
+
+#intro video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-text {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+#enterButton {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #00ff00;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Página Principal */
+.hidden {
+    display: none;
+}
+
+#mainContent {
+    height: 100vh;
+    background-color: #121212;
+    /* Cor de fundo sólida para a página principal */
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
