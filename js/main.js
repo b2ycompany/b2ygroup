@@ -1,16 +1,1 @@
-document.addEventListener('DOMContentLoaded', function () { console.log('DOM completamente carregado e pronto para ser manipulado.'); 
-// Identifica os elementos necessários 
-const loading = document.getElementById('loading'); const intro = document.getElementById('intro'); const enterButton = document.getElementById('enterButton'); const mainContent = document.getElementById('mainContent'); console.log(loading, intro, enterButton, mainContent); 
-// Verificar se todos os elementos foram encontrados corretamente 
-if (!loading || !intro || !enterButton || !mainContent) { console.error('Algum elemento não foi encontrado no DOM.'); return; } 
-// Garante que a transição acontece após 3 segundos 
-setTimeout(function () { console.log('3 segundos se passaram, transição da tela de loading para a introdução.'); if (loading && intro) { loading.classList.add('hidden'); 
-// Esconde o loading 
-intro.classList.remove('hidden'); 
-// Mostra a introdução 
-} }, 3000); 
-// 3 segundos de delay 
-// Evento para transitar da introdução para o conteúdo principal 
-if (enterButton) { enterButton.addEventListener('click', function () { console.log('Botão "Entrar" clicado.'); 
-// Esconde a introdução e mostra o conteúdo principal 
-if (intro && mainContent) { intro.classList.add('hidden'); mainContent.classList.remove('hidden'); } }); } });
+document.addEventListener('DOMContentLoaded', function () { console.log('DOM completamente carregado e pronto para ser manipulado.'); // Identifica os elementos necessários const loading = document.getElementById('loading'); const intro = document.getElementById('intro'); const enterButton = document.getElementById('enterButton'); const mainContent = document.getElementById('mainContent'); const progressBar = document.getElementById('progress-bar'); const progressText = document.getElementById('progress-text'); // Verificar se todos os elementos foram encontrados corretamente if (!loading || !intro || !enterButton || !mainContent || !progressBar || !progressText) { console.error('Algum elemento não foi encontrado no DOM.'); return; } let progress = 0; // Função para simular o carregamento e atualizar a barra de progresso function updateLoadingProgress() { progress += 1; progressBar.style.width = progress + '%'; progressText.innerText = progress + '%'; // Quando atingir 100%, esconde o loading e mostra a introdução if (progress >= 100) { setTimeout(() => { loading.classList.add('hidden'); // Esconde o loading intro.classList.remove('hidden'); // Mostra a introdução }, 500); // Aguarda um pequeno tempo para a animação do progresso } } // Atualiza a barra de progresso a cada 100ms const loadingInterval = setInterval(updateLoadingProgress, 100); // Evento para transitar da introdução para o conteúdo principal if (enterButton) { enterButton.addEventListener('click', function () { console.log('Botão "Entrar" clicado.'); // Esconde a introdução e mostra o conteúdo principal if (intro && mainContent) { intro.classList.add('hidden'); mainContent.classList.remove('hidden'); } }); } });
