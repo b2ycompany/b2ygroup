@@ -278,3 +278,27 @@ section {
         opacity: 1;
     }
 }
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1rem;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    .service-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .projects-gallery {
+        flex-direction: column;
+    }
+
+    #background-video {
+        height: auto;
+        /* Ajusta proporcionalmente no mobile */
+    }
+}
