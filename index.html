@@ -1,1 +1,94 @@
-<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="B2Y Group - Tecnologia e Sustentabilidade para um Futuro Melhor."> <title>B2Y Group - Business 2 You</title> <link rel="stylesheet" href="style.css"> </head> <body> <!-- Tela de Carregamento --> <div id="loading-screen"> <div class="loader-container"> <video autoplay muted loop id="background-video"> <source src="assets/videos/intro.mp4" type="video/mp4"> Seu navegador não suporta vídeos HTML5. </video> <div id="progress-bar-container"> <div id="progress-bar"></div> <div id="progress-text">0%</div> </div> <div id="start-button-container"> <button id="start-button">Iniciar</button> </div> </div> </div> <!-- Página Principal (Home) --> <div id="main-content"> <header> <div id="logo-container"> <img src="assets/images/logo.png" alt="Logo" id="logo"> </div> <nav> <a href="#about">Sobre</a> <a href="#projects">Projetos</a> <a href="#contact">Contato</a> </nav> </header> <section id="about"> <h2>Sobre Nós</h2> <p>Somos uma empresa focada em inovação e sustentabilidade, trazendo soluções tecnológicas para um futuro melhor.</p> </section> <section id="projects"> <h2>Projetos</h2> <div class="project-card"> <h3>Projeto 1</h3> <p>Descrição do projeto inovador.</p> </div> <div class="project-card"> <h3>Projeto 2</h3> <p>Descrição do projeto sustentável.</p> </div> </section> <section id="contact"> <h2>Contato</h2> <p>Entre em contato conosco para saber mais sobre nossas soluções.</p> <button class="contact-btn">Fale Conosco</button> </section> <footer> <p>&copy; 2024 B2Y Group. Todos os direitos reservados.</p> </footer> </div>  <script src="script.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="B2Y Group - Tecnologia e Sustentabilidade para um Futuro Melhor.">
+    <title>B2Y Group - Business 2 You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body> <!-- Tela de Carregamento -->
+    <div id="loading-screen">
+        <div class="loader-container"> 
+            <video autoplay muted loop id="background-video">
+                <source src="assets/videos/intro.mp4" type="video/mp4"> Seu navegador não suporta vídeos HTML5.
+            </video>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+                <div id="progress-text">0%</div>
+            </div>
+            <div id="start-button-container"> <button id="start-button">Iniciar</button> </div>
+        </div>
+    </div> <!-- Página Principal -->
+    <div id="main-content"> <!-- Cabeçalho com logo e navegação -->
+        <header> <img id="logo" src="assets/images/logo.png" alt="Logo">
+            <nav> <a href="#about">Sobre</a> <a href="#services">Serviços</a> <a href="#projects">Projetos</a> <a
+                    href="#contact">Contato</a> </nav>
+        </header> <!-- Seção Hero --
+            <section id="hero">
+                <div class="hero-overlay">
+                    <h1>Transformando o Futuro</h1>
+                    <p>Inovação, tecnologia e sustentabilidade para o seu negócio.</p>
+                </div>
+            </section>
+        </section> <!-- Seção Sobre Nós -->
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa focada em desenvolver soluções tecnológicas para o futuro. Com uma equipe altamente
+                qualificada, transformamos ideias em inovações que ajudam a construir um mundo mais sustentável e
+                conectado.</p>
+            <div class="about-images"> <img src="assets/images/1.png" alt="Tecnologia Futurística"> <img
+                    src="assets/images/fundo.png" alt="Equipe de Desenvolvimento"> </div>
+        </section> <!-- Seção Serviços -->
+        <section id="services">
+            <h2>Serviços</h2>
+            <div class="service-card">
+                <h3>Consultoria de TI</h3>
+                <p>Ajudamos sua empresa a implementar soluções tecnológicas eficientes e inovadoras para crescer no
+                    mercado.</p>
+            </div>
+            <div class="service-card">
+                <h3>Desenvolvimento de Software</h3>
+                <p>Criamos sistemas personalizados, aplicativos móveis e soluções digitais para atender às necessidades
+                    do seu negócio.</p>
+            </div>
+            <div class="service-card">
+                <h3>Transformação Digital</h3>
+                <p>Transforme a maneira como sua empresa opera e se conecta com seus clientes, utilizando as mais
+                    recentes inovações tecnológicas.</p>
+            </div>
+        </section> <!-- Seção Projetos -->
+        <section id="projects">
+            <h2>Projetos</h2>
+            <p>Conheça alguns dos projetos inovadores que estamos desenvolvendo para ajudar a moldar o futuro.</p>
+            <div class="projects-gallery">
+                <div class="project-item"> <img src="assets/images/project1.jpeg" alt="Projeto 1">
+                    <p>Projeto Trade Carbon</p>
+                </div>
+                <div class="project-item"> <img src="assets/images/project2.png" alt="Projeto 2">
+                    <p>App B2Y Carbon</p>
+                </div>
+                <div class="project-item"> <img src="assets/images/project3.png" alt="Projeto 3">
+                    <p>App Terapia Sat</p>
+                </div>
+            </div>
+        </section> <!-- Seção Contato -->
+        <section id="contact">
+            <h2>Contato</h2>
+            <form> <label for="name">Nome:</label> <input type="text" id="name" name="name" required> <label
+                    for="email">E-mail:</label> <input type="email" id="email" name="email" required> <label
+                    for="message">Mensagem:</label> <textarea id="message" name="message" required></textarea> <button
+                    type="submit">Enviar</button> </form>
+        </section> <!-- Rodapé -->
+        <footer>
+            <p>&copy; 2024 B2Y Group. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
