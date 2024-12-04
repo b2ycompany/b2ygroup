@@ -1,0 +1,280 @@
+/* Estilos gerais */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0d16;
+    color: #ffffff;
+    overflow-x: hidden;
+    /* Impede rolagem horizontal */
+    height: 100%;
+    /* Garantir que o corpo ocupe toda a altura da tela */
+}
+
+/* Cabeçalho fixo com mais interatividade */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    /* Transição suave */
+}
+
+header:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Efeito de hover no cabeçalho */
+}
+
+#logo {
+    width: 150px;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+    width: 170px;
+    /* Aumenta o logo ao passar o mouse */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Transição suave */
+}
+
+nav a:hover {
+    color: #0ff0ff;
+    transform: translateY(-5px);
+    /* Efeito de elevação no hover */
+}
+
+/* Seções principais com altura mínima para permitir rolagem */
+section {
+    min-height: 100vh;
+    /* Garante que a seção ocupe toda a altura da tela */
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seção Hero - Ajuste para a imagem principal */
+#hero {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    /* Efeito de fade-in na imagem */
+}
+
+#hero h1 {
+    font-size: 3rem;
+    color: #0ff0ff;
+    text-shadow: 0 0 15px #0ff0ff;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+#hero-image {
+    max-width: 80%;
+    /* Ajuste o tamanho da imagem principal */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+#hero-image:hover {
+    transform: scale(1.05);
+    /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Seção Sobre */
+#about {
+    background: #1a1f31;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #0ff0ff;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* Seção Serviços */
+#services {
+    background: #0b0d16;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.service-card {
+    background: #1a1f31;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    width: 30%;
+    display: inline-block;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    color: #0ff0ff;
+}
+
+.service-card p {
+    color: #aaa;
+}
+
+/* Seção Projetos */
+#projects {
+    background: #1a1f31;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.projects-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-item {
+    background: #0b0d16;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.project-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Seção Contato */
+#contact {
+    background: #1a1f31;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+#contact form {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #0ff0ff;
+    background: #0b0d16;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#contact button {
+    background: #0ff0ff;
+    color: #0b0d16;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact button:hover {
+    background: #00b8b8;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background: #0b0d16;
+    padding: 20px;
+    color: #aaa;
+    margin-top: 50px;
+}
+
+/* Forçando a altura mínima para a página principal */
+#main-content {
+    padding-top: 120px;
+    /* Ajuste para compensar o cabeçalho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Garantindo a rolagem nas seções */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    overflow-y: auto;
+    /* Habilita a rolagem vertical */
+}
+
+/* Seções com altura mínima para garantir rolagem */
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efeito de fade-in para as imagens e elementos */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
